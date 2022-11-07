@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt-br" ng-app="helloWorld">
+html ng-app="helloWorld">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <script src="angularJS.js"></script>
-    <script>
-        angular.module("helloWorld", []);
-        angular.module("helloWorld").controller("helloWorldCtrl", function ($scope){
-                $scope.message = "Hello World";
-        });
-    </script>
+	<title>Hello World</title>
+	<script src='angular.js'></script>
+	<script>
+		var app = angular.module("helloWorld", []);
+		app.controller("helloWorldCtrl", function($scope){
+			$scope.message = "Hello World!";
+		});
+	</script>
 </head>
-<body>
-    <div ng-controller="helloWorldCtrl">
-        {{message}}
-    </div>
+<body ng-controller="helloWorldCtrl">
+		{{message}}
 </body>
 </html>
+
